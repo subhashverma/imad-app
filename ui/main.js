@@ -20,5 +20,5 @@ button.onclick = function () {
   // make the reqest
   
   request.open('GET','http://subhashverma446.imad.hasura-app.io/counter', true);
-  request.open(null);
+  request.send(null);
 };
