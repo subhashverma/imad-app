@@ -10,7 +10,7 @@ var config = {
     host: 'db.imad.hasura-app.io',
     
     port: '5432',
-    password: 'db-subhashverma446-70639'
+    password: db.env.DB_PASSWORD
     
 };
 
