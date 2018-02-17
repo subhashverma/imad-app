@@ -33,7 +33,7 @@ button.onclick = function () {
        marginLeft = marginLeft + 5;
        img.style.marginLeft = marginLeft + 'px';
    }
-   img.onclick = function () {
+   img.onmouseover = function () {
        var interval = setInterval(moveRight, 50);
 };
 // submit name 
