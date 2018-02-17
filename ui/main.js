@@ -2,7 +2,12 @@
 var button = document.getElementById('counter');
 button.onclick = function () {
     
-    
+   // move image
+   var img = document.getElementById('madi');
+   madi.onclick = function () {
+       madi.style.marginleft = '100px';
+       
+   };
   // create a request object
   var request = new XMLHttpRequest();
   
