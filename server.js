@@ -18,65 +18,64 @@ var app = express();
 app.use(morgan('combined'));
  
 var articles = {
-'article-one': {
-    
-    title: 'article one subhash verma',
-    heading:'article one',
-    date:'august august 23',
-    content:`
-    <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>`
-    
-},
-'article-two':{
-     title: 'article two subhash verma',
-    heading:'article two',
-    date:'august august 23',
-    content:`
-    <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>`
-    
-},
-    'article-three':{
-         title: 'article three subhash verma',
-    heading:'article three',
-    date:'august august 23',
-    content:`
-    <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>
-  <p>
-this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
-  </p>`
-    
+    'article-one': {
+        
+        title: 'article one subhash verma',
+        heading:'article one',
+        date:'august august 23',
+        content:`
+        <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>`
+        
     },
-    
+    'article-two':{
+         title: 'article two subhash verma',
+        heading:'article two',
+        date:'august august 23',
+        content:`
+        <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>`
+        
+    },
+    'article-three':{
+             title: 'article three subhash verma',
+        heading:'article three',
+        date:'august august 23',
+        content:`
+        <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>
+      <p>
+    this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
+      </p>`
+        
+        }
 };
 function createTemplate (data){
     
@@ -175,8 +174,9 @@ app.get('/articles/:articleName', function (req, res) {
     
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articles,'article-one'));
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 app.get('/article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
