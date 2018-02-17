@@ -90,9 +90,7 @@ function createTemplate (data) {
           ${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <style>
-            
-        </style>
+
       </head>
       <body>
           <div class="container">
@@ -114,7 +112,7 @@ function createTemplate (data) {
       
     </html>
     `;
-    return htmlTemplate
+    return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
