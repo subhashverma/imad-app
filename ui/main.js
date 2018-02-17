@@ -2,18 +2,7 @@
 var button = document.getElementById('counter');
 button.onclick = function () {
     
-   // move image
-   var img = document.getElementById('madi');
-   var marginLeft = 0;
-   function moveRight () {
-       marginLeft = marginLeft + 5;
-       img.style.marginLeft = marginLeft + 'px';
-   }
-   img.onclick = function () {
-       var interval = setInterval(moveRight, 50);
-       
-       
-   };
+
   // create a request object
   var request = new XMLHttpRequest();
   
@@ -37,7 +26,16 @@ button.onclick = function () {
   request.open('GET','http://subhashverma446.imad.hasura-app.io/counter', true);
   request.send(null);
 };
-
+   // move image
+   var img = document.getElementById('madi');
+   var marginLeft = 0;
+   function moveRight () {
+       marginLeft = marginLeft + 5;
+       img.style.marginLeft = marginLeft + 'px';
+   }
+   img.onclick = function () {
+       var interval = setInterval(moveRight, 50);
+};
 // submit name 
 
 var submit = document.getElementById('submit_btn');
