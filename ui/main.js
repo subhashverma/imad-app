@@ -3,9 +3,9 @@ var button = document.getElementById('counter');
 button.onclick = function () {
     
    // move image
-   var madi = document.getElementById('madi');
-   madi.onclick = function () {
-       madi.style.marginleft = '100px';
+   var img = document.getElementById('madi');
+   img.onclick = function () {
+       img.style.marginleft = '100px';
        
    };
   // create a request object
