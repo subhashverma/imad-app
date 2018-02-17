@@ -3,7 +3,7 @@ var button = document.getElementById('counter');
 button.onclick = function () {
     
    // move image
-   var img = document.getElementById('madi');
+   var madi = document.getElementById('madi');
    madi.onclick = function () {
        madi.style.marginleft = '100px';
        
