@@ -95,7 +95,7 @@ function createTemplate (data) {
       <body>
           <div class="container">
                 <div>
-                  <a href="/">home</a>
+                  <a href="/">Home</a>
                 </div>
                 <hr/>
                 <h3>
@@ -107,7 +107,7 @@ function createTemplate (data) {
                 <div>
                 ${content}
                 </div>
-        </div>
+          </div>
       </body>
       
     </html>
