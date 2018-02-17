@@ -60,7 +60,7 @@ var articles = {
     'article-three':{
         title: 'article three subhash verma',
         heading:'article three',
-        date:'august august 23',
+        date:'august 23',
         content:`
         <p>
     this is d content. this is d content. this is d content. this is d content. this is d content. this is d content.
@@ -84,7 +84,7 @@ function createTemplate (data) {
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
-    var htmltemplate = `
+    var htmlTemplate = `
     <html>
       <head>
         <title>
