@@ -9,7 +9,7 @@ button.onclick = function () {
        marginLeft = marginLeft + 10;
        img.style.marginLeft = marginLeft + 'px';
    }
-   img.onclick = function () {
+   img.onhover = function () {
        var interval = setInterval(moveRight, 100);
        
        
