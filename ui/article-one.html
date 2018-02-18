@@ -36,7 +36,7 @@
             </p> 
         </div> 
         <hr/>
-         <input type = "text" id="name" placeholder="name">
+         <input type = "text" id="namee" placeholder="name">
               <input type="submit" value="comment" id="submit_btn">
               <ul id="namelist">
               </ul>
@@ -70,7 +70,7 @@
                 // not done yet
             };
             // make the reqest
-            var nameInput = document.getElementById('name');
+            var nameInput = document.getElementById('namee');
             var name = nameInput.value;
             request.open('GET','http://subhashverma446.imad.hasura-app.io/submit-name?name=' + name, true);
             request.send(null);
