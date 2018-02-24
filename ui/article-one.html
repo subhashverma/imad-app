@@ -1,0 +1,81 @@
+<!doctype html>
+    <head>
+        <title>
+            Article one Subhash verma
+        </title>
+        <meta name="viewport" content="width-device-width, initial-scale=1"/>
+
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container" >
+        <div>
+            <a href="/">Home</a>
+        </div>
+         <hr/>
+        <h3>
+                Article one
+        </h3>     
+        <div>
+                17 february 2018
+        </div>
+        <div>
+            <p>
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+            </p> 
+            <p>
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+                   This is my content for my first articel .
+                   This is my content for my first articel.
+                   This is my content for my first articel.
+            </p> 
+        </div> 
+        <hr/>
+         <input type = "text" id="namee" placeholder="name">
+              <input type="submit" value="comment" id="submit_btn">
+              <ul id="namelist">
+              </ul>
+        </div>
+        <script>
+        var comment = document.getElementById('submit_btn');
+        comment.onclick = function () 
+        {
+            // create a request object
+            var request = new XMLHttpRequest();
+            // capture the response and store it in a variable
+            request.onreadystatechange = function ()
+            {
+                if (request.readyState === XMLHttpRequest.DONE) 
+                {
+                    // TAKE some action
+                    if (request.status === 200) 
+                    {
+                        // capture a list and render a list
+                        var names = request.responseText;
+                        names = JSON.parse(names);
+                        var list = '';
+                        for (var i=0; i< names.length; i++) 
+                        {
+                            list += '<li>' + names[i] + '</li>';
+                        }
+                        var ul = document.getElementById('namelist');
+                        ul.innerHTML = list;
+                    }
+                }
+                // not done yet
+            };
+            // make the reqest
+            var nameInput = document.getElementById('namee');
+            var name = nameInput.value;
+            request.open('GET','http://subhashverma446.imad.hasura-app.io/submit-name?name=' + name, true);
+            request.send(null);
+        };
+        </script>
+    </body>
+</html>
+ 
